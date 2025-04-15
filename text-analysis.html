@@ -8,27 +8,41 @@
         body {
         font-family: 'Poppins', sans-serif;
         margin: 0;
-        padding: 20px;
+        padding: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
         background: linear-gradient(135deg, #3f68d8, #3f68d8);
         color: #333;
-        }
+    }
+    
         .container {
-        max-width: 1000px;
-        margin: auto;
-        background: rgb(253, 210, 255);
-        padding: 25px;
-        border-radius: 15px;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            flex: 1;
+            max-width: 1000px;
+            margin: auto;
+            background: rgb(253, 210, 255);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            box-sizing: border-box;
         }
+
         textarea {
-        width: 100%;
-        height: 300px;
-        padding: 10px;
-        font-size: 1em;
-        border-radius: 8px;
-        border: 1px solid #ccc;
+        display: block;
+        margin: 20px auto;
+        width: 90%;
+        max-width: 700px;
+        height: 250px;
+        padding: 15px;
+        font-size: 1.05em;
+        border-radius: 10px;
+        border: 2px solid #ff88cc;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
         resize: vertical;
-        }
+        box-sizing: border-box;
+    }
+
+    
         button {
         padding: 10px 20px;
         font-size: 1em;
@@ -56,6 +70,23 @@
         .grouped-output {
         margin-bottom: 10px;
         }
+        @media (max-width: 768px) {
+        textarea {
+            height: 200px;
+            font-size: 0.95em;
+        }
+        button {
+            width: 100%;
+            font-size: 1em;
+        }
+    }
+
+    p a {
+    color: white;
+    text-decoration: underline;
+    }
+    
+    
     </style>
     </head>
     <body>
@@ -71,12 +102,10 @@
         </div>
     </div>
 
-    <p style="color: white;">
-  Back to 
-  <a href="index.html" style="color: white;">My Personal Website</a>
-</p>
-
-    
+    <div style="text-align: center; margin: 20px 0;">
+        <p>Back to <a href="index.html">My Personal Website</a></p>
+      </div>
+      
 
     <script>
         // Define lists for pronouns, prepositions, and indefinite articles
